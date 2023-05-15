@@ -1,0 +1,222 @@
+ALGORITHM devoirGomyCode
+VAR
+    phrase : STRING;
+    sizePh : INTEGER;
+    sizeMt : INTEGER;
+    sizeVy : INTEGER;
+    i : INTEGER
+    // voyelle = ['a','e,''o,''u,','i,','y'];
+BEGIN
+// entrer la phrase
+    WRITE('Entrer votre phrase');
+    READ(phrase);
+
+    //taille de la phrase
+    sizePh =  phrase.length;
+        // .length permet de recuperer la taille de la phrase
+
+
+    // nombre de mot
+        // separer les mots et les mettre dans un tableau
+        // les compter
+        sizeMt =  explode(' ',phrase).length()
+            
+
+
+        // nombre de voyelle
+            // recuperer toutes les lettres de la phrase
+        allLetter = str_split(phrase);
+            // faire un boucle qui compare les lettres à un list predefini
+            i = 0;
+        WHILE ( allLetter.length != '.' ) DO
+
+            // ajouter 1 à i si allLetter[]  == element dans mon tableau
+            IF (allLetter[i] == 'a' || 'e'|| 'o'|| 'u'|| 'i' || 'y' ) THEN
+                i ++;
+            END_IF
+
+            // incrementation de i
+            // i++;
+        END_WHILE
+
+        sizeVy = i;
+
+
+    
+END
+
+                // une fonction qui a 3 parametres et renvoie leur somme 
+
+
+ALGORITHM somme
+
+// declaration de variables
+
+VAR 
+    a : INTEGER
+    b : INTEGER
+    c : INTEGER
+    result : INTEGER
+
+    i := 1
+
+
+// corps
+BEGIN
+    // declaration de la variable
+    FUNCTION sum (a : INTEGER , b: INTEGER , c:INTEGER) : INTEGER
+
+    BEGIN
+        return a+b+c ;
+    END 
+
+    WRITE('Entrer le premier nombre');
+    READ a;
+
+    WRITE('Entrer le deuxieme nombre');
+    READ b;
+
+    WRITE('Entrer le troisieme nombre');
+    READ c;
+
+    WRITE('la somme est : '+sum(a,b,c))
+
+END
+
+/*
+Exemple:
+Ensemble 1 : [3, 1, 7, 9], Ensemble 2: [2, 4, 1, 9, 3]
+Extrant : 13 (éléments distincts 4, 7, 2)
+Donner une solution à ce problème, en utilisant des tableaux
+
+*/
+
+ALGORITHM compare
+
+VAR
+    tab1 : ARRAY_OF_INTEGER{4};
+    tab2 : ARRAY_OF_INTEGER{5};
+    recup : ARRAY_OF_INTEGER;
+    sum : INTEGER;
+    i,j:INTEGER;
+
+
+
+BEGIN
+    tab1 := {3, 1, 7, 9};
+    tab2 := {2, 4, 1, 9, 3};
+    sum := 0;
+
+//parcourir le premier tableau 
+FOR i FROM 0 TO tab1.length-1 STEP 1  DO
+    // recupere le premier element du tableau
+    current = tab1[i];
+    // parcourir le deuxieme tableau 
+    FOR j FROM 0 TO tab2.length-1 STEP 1  DO
+        // verifie si les elements du tableau 2 sont egaux à l'element du tableau 1
+        IF (tab2[i] === current) THEN
+            break
+        ELSE
+            IF (j == tab2.length-1) THEN
+                recup[] = tab1[i]
+            END_IF
+        END_IF
+    END_FOR
+
+    sum := recup.length
+    
+    WRITE('Les éléments distincts des 2 ensembles sont : ' : )
+    FOR x FROM 0 TO recup.length-1 STEP 1  DO
+        WRITE(recup[x])
+    END_FOR
+
+END_FOR
+
+
+
+END
+
+/*
+Problème 2
+Vous êtes invité à écrire un algorithme qui remplit les conditions suivantes :
+
+Nom: Produit Dot
+Description:
+Ecrire une procédure, appelée dot_product qui calcule dans la variable ps, le produit ponctuel(scalaire) de v1 et v2 (v1 et v2 sont des vecteurs de IR)
+Écrire un algorithme qui détermine, pour n paires de vecteurs donnés, si deux vecteurs de RI donné sont orthogonaux, en appelant la procédure définie dans la question précédente. Le produit ponctuel de deux vecteurs orthogonaux est nul.
+Modifiez l’algorithme précédent si vous utilisez une fonction dot_product au lieu d’une procédure.
+*/
+
+
+ALGORITHM SCALAIRE
+VAR
+    Nom : ;
+    description : ;
+    v1 : ARRAY_OF_INTEGER;
+    v2 : ARRAY_OF_INTEGER;
+    taille : INTEGER;
+    elt : INTEGER;
+    i : INTEGER
+BEGIN
+// realisation des vecteurs
+    // determiner la taille des vecteurs
+    WRITE('Quelle est la taille de votre vecteurs ?');
+    READ taille;
+
+    // creation des vecteurs
+    WHILE (i <> taille ) DO
+        WRITE('Donner element '+ i+1 +'du vecteur v1');
+        READ elt;
+        v1[] = elt; 
+        WRITE('Donner element '+ i+1 +'du vecteur v2');
+        READ elt;
+        v2[] = elt; 
+    END_WHILE
+
+    // calcul du produit scalaire
+
+
+
+    PROCEDURE dot_product(v1,v2)
+    VAR
+        ps : INTEGER;
+    BEGIN
+        set_instructions
+    END
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// declare tab 1
+// declare tab2
+
+// compare tab 1 a tab 2 
+// si valeur tab1 est  != tab 2 alors recup valeur tab1
+
+
+
+
+
+// 4  
